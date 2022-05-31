@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS : Nested Loops</title>
+  </head>
+
+  <body>
+    <pre>
+
+
+        Nested Loops In JS:-  
+        We Can Put Multiple Loops Inside Another Loop
+
+        Like:  Multiple While in While
+
+               Multiple Do While Inside A Do While
+
+               Multiple For Loops Inside A For Loop
+  
+
+
+
+
+
+Q.No.1
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+
+
+Q.No.2
+
+* * * * *
+* * * *
+* * *
+* *
+*
+
+
+
+
+Q.No.3
+
+1
+1 2
+1 2 3 
+1 2 3 4
+1 2 3 4 5
+
+
+
+
+Q.No.4
+1 2 3 4 5
+  2 3 4 5
+    3 4 5
+      4 5
+        5
+
+  
+        
+
+Q.No.5        
+1 2 3 4 5
+  1 2 3 4
+    1 2 3
+      1 2
+        1        
+
+
+
+
+Q.No.6
+        *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
+
+
+    </pre>
+
+    <script>
+      //SOLUTION 1
+      document.write(`Solution 1 Method A:-`);
+      document.write(`<br>`);
+      for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= i; j++) {
+          document.write(`* `);
+        }
+        document.write(`<br>`);
+      }
+
+      document.write(`<br>`);
+      document.write(`Solution 1 Method B:-`);
+      document.write(`<br>`);
+      for (i = 0; i <= 5; i++) {
+        for (j = 1; j <= i; j++) {
+          document.write(`* `);
+        }
+        document.write(`<br>`);
+      }
+
+      document.write(`<br>`);
+      document.write(`Solution 1 Method C:-`);
+      document.write(`<br>`);
+      for (i = 0; i < 5; i++) {
+        for (j = 0; j <= i; j++) {
+          document.write(`* `);
+        }
+        document.write(`<br>`);
+      }
+
+      document.write(`Solution 1 Method D:-`);
+      document.write(`<br>`);
+      for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= 5; j++) {
+          if (j <= i) {
+            document.write(`* `);
+          }
+        }
+        document.write(`<br>`);
+      }
+
+      //SOLUTION 2
+      document.write(`<br>`);
+      document.write(`Solution 2`);
+      document.write(`<br>`);
+      for (i = 5; i >= 1; i--) {
+        for (j = 1; j <= i; j++) {
+          document.write(`* `);
+        }
+        document.write(`<br>`);
+      }
+
+      document.write(`<br>`);
+      document.write(`Solution 3 Type 1:- `);
+      document.write(`<br>`);
+      for (m = 1; m <= 5; m++) {
+        for (n = 1; n <= m; n++) {
+          document.write(`${n} `);
+        }
+        document.write(`<br>`);
+      }
+
+      document.write(`<br>`);
+      document.write(`Solution 3 Type 2:- `);
+      document.write(`<br>`);
+      let p = 1;
+      for (m = 0; m < 5; m++) {
+        for (n = 0; n <= m; n++) {
+          document.write(`${p} `);
+        }
+        document.write(`<br>`);
+        p++;
+      }
+
+      //SOLUTION 3
+      document.write(`<br>`);
+      document.write(`Solution 3 Type 3:-`);
+      document.write(`<br>`);
+      for (i = 5; i >= 1; i--) {
+        for (j = 1; j <= i; j++) {
+          document.write(`${j} `);
+        }
+        document.write(`<br>`);
+      }
+
+      //SOLUTION 6
+      document.write(`<br>`);
+      document.write(`Solution 6`);
+      document.write(`<br>`);
+      let r = 0;
+      for (q = 1; r <= 5; ++q) {
+        for (s = 1; s <= 5 - q; s++) {
+          document.write(` `);
+        }
+        while (r != 2 * q - 1) {
+          document.write(`* `);
+          ++r;
+        }
+        document.write(`<br>`);
+      }
+
+      //TRY:-
+      // COde: 1
+      // for (let i = 1; i <= 5; i++)
+      //       {
+      //           for(let j=1;j<=5;j++)
+      //           {
+      //               if(j<i){
+      //                   document.write("&nbsp;&nbsp;&nbsp;")
+      //               }
+      //               else{
+      //                   document.write(j-i+1 +" ")
+      //               }
+      //           }
+
+      //           document.write("<br>")
+      //       }
+    </script>
+  </body>
+</html>

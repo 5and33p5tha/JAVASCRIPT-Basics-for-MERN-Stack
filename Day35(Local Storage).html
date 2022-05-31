@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Local Storage in JS (JSON)</title>
+</head>
+
+<body>
+
+   <pre>
+      Local Storage are like cookies. They store our data in browser i.e client side. This reduces the loading time 
+
+
+      JSON=Java Script Object Notation
+
+      normally,
+      we do {name:"_________"}
+      In JSON, the format is (_________,"_________")
+
+      IN All Object, The Beginning is Ket and The End Is Value
+   </pre>
+
+
+
+
+
+
+
+
+   <script>
+      // let data={"key",""}  
+      // localStorage.setItem("key","") //This is a JSON Object
+
+      // or we can do
+      let key = "Name"
+      let value = "Information"
+      localStorage.setItem(key, value)
+
+
+
+      let data = localStorage.getItem(key)
+      document.write(data) //This Prints  The Value, Not The Object Itself
+
+
+      //To Store An Object we use curly braces
+      let details = {
+         Name: "Sandeep",
+         Address: "Lalitppur",
+         Phone: ["9801700990", "9849933824"] // Here phone is an array
+      }
+      // localStorage.setItem("info", details)  //Here infor is the new object to store another object
+      //object cannot be stored directly. it forst needs to be converted into string
+
+
+      // so we write
+      localStorage.setItem("info", JSON.stringify(details))
+
+
+
+      //To display the result
+      let result = localStorage.getItem("info")
+      document.write(`<br>`)
+      document.write(result)
+
+
+      //Now To Convert String Back To Object. We Do This So We Can Edit or Modify The Stored Data
+      let person = JSON.parse(result)
+      //Here, Person is a new object. Parse converts the result into new object
+
+      document.write(person.Name)
+      document.write("<br>" + person.Address)
+      document.write("<br>" + person.Phone[1])
+
+
+      // localStorage.clear()          This Will Clear The Local Storage
+
+
+
+
+
+
+
+
+      let c = [a: "1", b: "2"], [a:"3", b: "4"]
+
+
+
+
+   </script>
+</body>
+
+</html>

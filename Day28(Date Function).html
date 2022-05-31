@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>date functions</title>
+  </head>
+
+  <body>
+    <h2 id="time"></h2>
+
+    <script>
+      // let today=new Date()
+      // document.write(today)
+      // document.write("<br>"+today.getFullYear())
+      // let month=Number(today.getMonth())+1
+      //Month +1 as getMonth() shows 1 month less
+      // document.write("<br>"+month)
+      // function timer() {
+      //     let today = new Date()
+      //     // document.write("<br>" + today.getFullYear())
+      //     // document.write(`<br> ${Number(today.getMonth()) + 1}`)
+      //     // document.write("<br>" + today.getDate())
+      //     // document.write(`<br> ${today.getDay() + 1}`)
+      //Day +1 as getDay() shows 1 month less
+
+      //    hr = today.getHours()
+      //     min = today.getMinutes()
+      //     sec = today.getSeconds()
+
+      //     return (hr+":"+min+":"+sec)
+      // }
+
+      //SYNTAX:-
+      //   setInterval(() => {}, TIME IN MILLISECOND);
+      //   setInterval(() => {}, TIME IN MILLISECOND);
+
+      setInterval(() => {
+        //MEANS IT WILL LOAD THIS after 1 SECOND
+        let today = new Date();
+        hr = today.getHours(); //getHours gets Hours
+        min = today.getMinutes(); //getMinutes gets Minutes
+        sec = today.getSeconds(); //getSeconds gets Seconds
+        str = hr + ":" + min + ":" + sec;
+        document.getElementById("time").innerHTML = str;
+      }, 1000); //1000 means 1000 represents 1 seconds, Here IT WILL LOAD THIS after 1 SECOND
+
+      setTimeout(() => {
+        //MEANS IT WILL PERFORM THIS after
+        document.getElementById("time").style.color = "red";
+      }, 5000); //5000 means 5000 represents 5 seconds, Here IT WILL PERFORM THIS after 5 SECOND
+    </script>
+  </body>
+</html>

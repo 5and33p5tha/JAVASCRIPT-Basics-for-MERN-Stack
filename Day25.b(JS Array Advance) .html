@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS : Array Advance</title>
+  </head>
+
+  <body>
+    <pre>
+
+
+      Please Note:
+
+      Let or Const CANNOT BE DEFINED AGAIN UNLESS IN BLOCK i.e in {}
+
+
+      But VAR CAN BE REPLACE OR DEFINED AGAIN AS IT IS GLOBAL ELEMENT
+
+
+
+
+
+    </pre>
+
+    <script>
+      let a = ["apple", "grapes", "carrot", "radish"];
+      document.write(a); //Print Array
+      document.write(`<br>`);
+
+      //ONLY SLICE WORKS IN NEW ARRAY, OTHER WORKS IN THE EXISTING ARRAY
+      //To Slice an Array from existing array. i.e CREATE AN ARRAY FROM EXISTING ARRAY
+      // //Parameter are:-
+      // Start: The Beginning to take from
+      // End:- This Is Excluded. i.e True End = End-1
+      let c = a.slice(1, 3);
+      document.write(`<br> ${c}`);
+
+      //SLICE If End Is Not Given
+      document.write(`<br>`);
+      let d = a.slice(1);
+      document.write(`<br> ${d}`); //This Takes True End
+      document.write(`<br>`);
+
+      //To Remove an item from middle
+      //Splice(start, number)
+      let e = a.splice(1);
+      document.write(`<br> ${e}`); //This SHOWS WHAT HAS BEEN REMOVED
+      document.write(`<br>`);
+      document.write(`<br> ${a}`); // THIS SHOWS RESULT AFTER REMOVAL
+
+      //ADD IN BETWEEN USING SPLICE
+      // splice(index, number, items to add)
+      a = ["mango", "pineapple", "pomogranate", "avocado"];
+      let f = a.splice(1, 0, "pear", "dragonfruit");
+      document.write(`<br> removed ${f}`); //This SHOWS WHAT HAS BEEN REMOVED. SAME AS ABOVE
+      document.write(`<br>`);
+      document.write(`<br> a: ${a}`); //THIS SHOWS WHAT HAS BEEN ADDED AND WHERE. IN THIS EXAMPLE, IT HAS BEEN ADDED AFTER 1 INDEX i.e 0,1 and then ADDED
+
+      // //SHIFT, UNSHIFT
+      // SHIFT:- REMOVES FROM BEGINNING
+      // UNSHIFT:- ADD AT THe Beginning
+
+      //SHIFT
+      document.write(`<br>`);
+      document.write(`<br> ${a}`);
+      a.shift(); // This Removes the element from INDEX 0 Unlike Push or Pop That Works in FIFO Order
+      document.write(`<br> ${a}`);
+
+      //UNSHIFT
+      document.write(`<br>`);
+      document.write(`<br> ${a}`);
+      a.unshift("appricot"); // This ADDS the element from INDEX 0 Unlike Push or Pop That Works in FIFO Order
+      document.write(`<br> ${a}`);
+
+      //index)f, lastIndexof
+
+      //IndexOf
+      document.write(`<br>`);
+      document.write(`<br> index of pineapple is  ${a.indexOf("pineapple")}`); //Shows The FIRST OCCURENCE OF PINEAPPLE IN ARRAY A[]
+
+      //LastIndexOf
+      document.write(`<br>`);
+      document.write(
+        `<br> The Last index of pomogranate is  ${a.lastIndexOf("pomogranate")}`
+      ); //Shows The LAST OCCURENCE OF PINEAPPLE IN ARRAY A[]
+    </script>
+  </body>
+</html>

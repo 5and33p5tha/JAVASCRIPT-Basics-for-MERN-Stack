@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Rolling for 2 Players In JS</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+      }
+    </style>
+  </head>
+
+  <body
+    style="
+      background-image: url(https://t3.ftcdn.net/jpg/02/67/64/28/360_F_267642803_KVtMHr0J2NLjWyDPidOkJVoyVCuHjoPu.jpg);
+      background-repeat: no-repeat, repeat;
+      background-size: cover;
+    "
+  >
+    <h1 id="result" style="text-align: center; color: maroon">
+      Dice Game (Roll The Dice To Continue)
+    </h1>
+    <div class="container">
+      <div class="player">
+        <img
+          src="../JavaScript/Dice Faces/Dice - Face 1.png"
+          alt=""
+          id="p1_dice"
+          width="300px"
+          height="300px"
+        />
+        <h3 id="p1_roll" style="text-align: center; color: maroon">
+          Roll The Dice
+        </h3>
+      </div>
+
+      <div class="player">
+        <img
+          src="../JavaScript/Dice Faces/Dice - Face 1.png"
+          alt=""
+          id="p2_dice"
+          width="300px"
+          height="300px"
+        />
+        <h3 id="p2_roll" style="text-align: center; color: maroon">
+          Roll The Dice
+        </h3>
+      </div>
+    </div>
+    <center>
+      <button
+        onclick="rollthedice()"
+        style="
+          height: 50px;
+          width: 200px;
+          font-size: 30px;
+          background-color: maroon;
+          color: mintcream;
+          border-radius: 20px;
+        "
+      >
+        Roll
+      </button>
+    </center>
+
+    <script>
+      // WE CAN SKIP LET, VAR AND CONST ASWELL:-
+      // dice_face = ["../JavaScript/Dice Faces/Dice Face 1.png, ../JavaScript/Dice Faces/Dice Face 2.png, ../JavaScript/Dice Faces/Dice Face 3.png,../JavaScript/Dice Faces/Dice Face 4.png,../JavaScript/Dice Faces/Dice Face 5.png,../JavaScript/Dice Faces/Dice Face 6.png"]
+
+      function rollthedice() {
+        // const dice_face = ["../JavaScript/Dice Faces/Dice Face 1.png", "../JavaScript/Dice Faces/Dice Face 2.png", "../JavaScript/Dice Faces/Dice Face 3.png", "../JavaScript/Dice Faces/Dice Face 4.png" , "../JavaScript/Dice Faces/Dice Face 5.png", "../JavaScript/Dice Faces/Dice Face 6.png"]
+        //or even better , define source in bottom and just write the image (what we need in array) here WE DO THIS WHILE DISPLAYING IMAGE FACE
+
+        const dice_face = [
+          "Dice - Face 1.png",
+          "Dice - Face 2.gif",
+          "Dice - Face 3.png",
+          "Dice - Face 4.png",
+          "Dice - Face 5.gif",
+          "Dice - Face 6.gif",
+        ];
+        let r1, r2;
+
+        //CEILING TAKES TO UPPER STATE.
+        //FLOOR TAKES IT TO LOWER STATE
+
+        // r1=Math.ceil(Math.random()*6)
+        // //HERE, MATH .RANDOM CREATES OUTPUT BETWEEN 0 AND 1. SO
+        // //0*6=0
+        // //1*6=6
+        // //WE WE MULTIPLY BY 6 TO GET OUTPUT UPTO 6
+        // r2=Math.ceil(Math.random()*6)
+        // document.getElementById("p1_roll").innerHTML=r1
+        // document.getElementById("p2_roll").innerHTML=r2
+
+        r1 = Math.floor(Math.random() * 6);
+        //HERE, MATH .RANDOM CREATES OUTPUT BETWEEN 0 AND 1. SO
+        //0*6=0
+        //1*5=5
+        //WE WE MULTIPLY BY 6 TO GET OUTPUT UPTO 6
+        // r2 = Math.ceil(Math.random() * 6)
+        r2 = Math.floor(Math.random() * 6);
+        document.getElementById("p1_roll").innerHTML = r1 + 1;
+        document.getElementById("p2_roll").innerHTML = r2 + 1;
+        //WE DID +1 TO GET RESULT FROM 1 TO 6 for FLOOR
+
+        //NOW TO CHANGE IMAGE I.E DICE FACE
+        // document.getElementById("p1_dice").src = dice_face[r1]
+        //IF FOR CEIL, WE HAVE TO WRITE
+        //  document.getElementById("p1_dice").src = dice_face[r1-1]  THIS IS TO MATCH THE IMAGE. SAY if our roll is 1, we have to show image of array index 1 which is first image.
+
+        document.getElementById("p1_dice").src =
+          "../JavaScript/Dice Faces/" + dice_face[r1]; //THE SOURCE IS DEFINED HERE
+        // document.getElementById("p2_dice").src = dice_face[r2]
+        document.getElementById("p2_dice").src =
+          "../JavaScript/Dice Faces/" + dice_face[r2];
+
+        //NOW TO SHOW RESULT
+        if (r1 > r2) {
+          document.getElementById("result").innerHTML = "Player 1 Wins";
+        } else if (r2 > r1) {
+          document.getElementById("result").innerHTML = "Player 2 Wins";
+        } else {
+          document.getElementById("result").innerHTML = "Its A Draw";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listing Items in JS</title>
+  </head>
+
+  <body>
+    <script>
+      data_array = [75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85];
+
+      function show() {
+        data_array.map(function temp(item) {
+          document.write(`<li> $(item)</li>`);
+        });
+      }
+
+      //IF THE ABOVE LINE WAS TO BE WRITTEN AS ARROW FUNCTION, IT WILL BE EASIER AND SHORT
+      //i.e item=> document.write(`<li> $(item)</li>`)
+
+      function add() {
+        data_array.push(99);
+      }
+    </script>
+  </body>
+</html>

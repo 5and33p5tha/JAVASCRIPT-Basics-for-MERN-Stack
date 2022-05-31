@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Intro</title>
+  </head>
+
+  <body>
+    <div id="demo"></div>
+
+    <script>
+      // let a=Number(prompt("Enter The Value of a"));
+      // The NUMBER KEYWORD is USED TO CONVERT STRING TO NUMBER, IN JS, NATURALLY ALL VALUES ARE STRING BY DEFAULT
+
+      // let a=parseInt(prompt("Enter The Value Of a"))
+      // The parseInt is also USED TO CONVERT THE STRING IN NUMBER
+
+      // The PROMPT ASKS THE USER THE INPUT VALUE
+
+      // console.log(a)
+      // This Passes the value of a in console in INSPECT of Web Page So We Can Find The Error Easily. ERROR CHECKING BASICALLY
+
+      // document.write("The VAlue of A is",a)
+      // This Allows the PRINTS THE INPUT VALUE i.e SHOWS OUTPUT, THIS OVERWRITES THE PREVIOUS VALUES IF PUT IN ACTION FOR EXAMPLE PUT IN ACTION OF BUTTON AS CLICK
+
+      // document.write(typeof(a))
+
+      // window.alert(a)
+      // This Shows a POP UP MESSAGE of what we entered
+
+      // window.print(a)
+      // This PRINTS the document LITERALLY!
+
+      // DEMO EXPLAINATION
+      // document.getElementById("demo").innerHTML="HELLO"
+      // here, as the div demo is in previous flow, the word hello is printed first rather than other programs
+
+      // let a;
+
+      // Type of character defining ways:-
+      // let                 Limited/Block Scope    VALUE CANNOT BE CHANGED IN SAME BLOCK, MULTIPLE LETS CANNOT BE DEFINED
+      // const               Limited/Block Scope    VALUE CANNOT BE CHANGED IN SAME BLOCK, MULTIPLE CONST CANNOT BE DEFINED
+      // var                 Global Scope
+
+      // document.write(a+"<br>")
+      // THE + is USED TO CONCATINATE THE TWO TERMS
+
+      //EVEN BETTER WAY, AS FOLLOWS:
+      // document.write(`${a} <br> HELLO <br>`)
+
+      // document.write(`'' <br>`)
+      // document.write('`<br>')
+      // document.write("'<br>")
+      // document.write(`${a} <br> HELLO <br>`)
+      // document.write(`${a} <br> HELLO <br>`)
+
+      // document.write(typeof(a))
+
+      let a = 7;
+
+      // let a=10; THIS CANNOT BE DONE, SAME STANDS TRUE FOR CONST ALSO
+
+      a = 10;
+      document.write(a + "<br>");
+
+      {
+        // var a=99;
+        // AS LET IF ALREADY DEFINED FOR A , WE CANNOT USE VAR FOR A EVEN IN BLOCK FORM
+
+        let a = 777;
+        document.write(a + "<br>");
+      }
+
+      {
+        let a = 46;
+        document.write(a + "<br>");
+      }
+
+      document.write(a + "<br>");
+
+      // FOR VAR
+
+      var b = 17;
+      document.write(b + "<br>");
+
+      {
+        var b = 46;
+        document.write(b + "<br>");
+      }
+
+      //FOR CONST
+
+      const z = 7;
+      document.write(z + "<br>");
+    </script>
+  </body>
+</html>

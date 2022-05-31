@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async-Await With Promise and then catch functions</title>
+  </head>
+
+  <body>
+    <script>
+      data_array = [75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85];
+
+      function show() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const error = false;
+            if (!error) {
+              data_array.map(function temp(item) {
+                document.write(`<li>${item}</li>`);
+              });
+              resolve("successful show");
+            } else {
+              reject("error while show");
+            }
+          }, 2000);
+        });
+      }
+
+      function add() {
+        return new Promise((resolve, reject) => {
+          // return new Promise(function xyz(resolve,reject){
+          setTimeout(() => {
+            data_array.push(99);
+            const error = false;
+            if (!error) {
+              resolve();
+            } else {
+              reject("error while adding");
+            }
+          }, 3000);
+        });
+      }
+
+      add()
+        .then(() => {
+          show()
+            .then((msg) => {
+              setTimeout(() => {
+                console.log(msg);
+              }, 1000);
+            })
+
+            .catch(function dispay_error(error) {
+              console.log(error);
+            });
+        })
+        .catch(function dispay_error(error) {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>

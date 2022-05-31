@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operators</title>
+  </head>
+  <body>
+    <pre>
+        Operators
+        1. Arithmetic Operators
+            +, -, *, /, %, **
+        2. Assignment Operators
+            = , +=, -=, /=, %/
+        3. Comparision Operators
+            <, >, <=, >=, !=, ==, ===
+        4. Bitwise Operators
+            <<, >>, &, |, !, <<<, >>> 
+        5. Logical Operators
+            && , || , ! 
+        6. Ternary Operator: 
+syntax:             condition ? value if true : value if false
+        
+    </pre>
+
+    <script>
+      var a = 2;
+      // document.write(a + "<br>")
+      // {
+      //     var a=""
+      //     document.write(a + "<br>")
+
+      // }
+      // document.write(a + "<br>")
+
+      let b = 3;
+      // b+=2  //b=b+2
+      // a%=2 //a=a%2
+      let c = a + b;
+      document.write("a= " + a + "<br>");
+      // document.write("sum = " + a+b +"<br>")
+      document.write(`Sum = ${a + b} <br>`);
+      document.write("difference = " + (b - a) + "<br>");
+      document.write("Product = " + a * b + "<br>");
+      document.write("divident = " + a / b + "<br>");
+      document.write("quotient = " + (a % 5) + "<br>");
+      document.write("exponent = " + a ** b + "<br>");
+
+      a = 2;
+      b = "2";
+
+      if (a == b) document.write("a is equal to b <br>");
+      else document.write("a is not equal to b <br>");
+
+      // using ternary
+      c = a == b ? "a is EQUAL to b" : "a is not equal to b";
+      document.write(c);
+
+      // result: a is equal to b
+
+      document.write(" <br> ");
+
+      if (a === b) document.write("a is equal to b");
+      else document.write("a is not equal to b");
+      // result: a is not equal to b
+
+      document.write(" <br> ");
+      a = 5;
+      b = 2;
+      c = a & b;
+      document.write(`${a & b} <br>`);
+      document.write(`${a | b} <br>`);
+      document.write(`${!b} <br>`);
+    </script>
+  </body>
+</html>

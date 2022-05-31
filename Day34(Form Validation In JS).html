@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form Validation in JS</title>
+</head>
+
+<body>
+
+   <pre>
+      THE form validation check the format only. this checks whether the format are correct or not in the browser. This reduces the work in backend as work is divided for browser
+
+
+      EXPRESSIONS USED IN JS AS DEFINED 
+/expression/
+ARE CALLED EXPRESSION LITERALS
+
+
+
+[] -> collection of characters
+
+[a-z] -> alphabets -lowercase
+//Means From small 'a' through 'z'
+
+
+
+[A-Z] -> Uppercase alphabets
+//Means From capital 'A' through 'Z'
+
+
+
+[a-zA-Z]-> both uppercase and lowercase alphabets
+
+
+
+[a-zA-Z0-9] -> lowercase, uppercase alphabets and numbers
+
+
+
+[0-9] -> numbers allowed only
+
+
+
+{min-character, max-character} -> 
+
+{8,} -> minimum 8 characters 
+
+{,30} ->upto 30 characters 
+
+{8,30} ->between 8 and 30 characters
+
+
+
+
+/ experssion / -> experssion is enclosed within / /
+like /i, /g, /ig, etc (More Elabotrated Example in TO REPLACE Array Function)
+
+
+
+
+. -> single character    // Only One Character Allowed in Place of '.'
+			//Example expr.ssion
+			//we can write 'e' or any other but only 1 character
+
+
+
+* -> multiple character 	// Multiple Characters Allowed in Place of '.'
+			//Example expr*ion
+			//we can write 'ession' or any other multiple characters
+
+
+
+^ -> check from the start  //Makes it compulsory in START
+
+
+
+$ -> check at the end 	 //Makes it compulsory at the END
+
+
+
+?= -> check the pattern, irrespective of position    //Say we want the pattern 'he'
+						  //Checks for 'the'; 'heritage' : checks for he pattern, is case sensitive
+
+
+
+\@ -> special character @
+\_, \-, \. , \$, \*  -> special character
+
+
+
+email: /^([a-z0-9])[a-z0-9\_\-\.\$]+\@+([a-z])+\.+([a-z])$/
+       /^([a-z0-9])[a-z0-9\_\-\.\$]+\@+([a-z])+\.+([a-z])$/
+	//THIS IS TO MAKE STANDARD EMAIL FORMAT
+
+
+
+name: /^([a-zA-Z])+$/
+	//THIS IS TO MAKE STANDARD NAME FORMAT
+
+
+
+password: /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@!_-$%^&*]).{8,30}$/
+          /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@!_-$%^&*])$/)
+	//THIS IS TO MAKE STANDARD PASSWORD FORMAT
+   </pre>
+
+   <form action="../HTML/Day9.a(Basic Animations).html" onsubmit="return formValidation()">
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" onkeyup="fnameValidation()">
+      <span id="fname_message"></span><br>
+      <br>
+      <!-- 
+      NOTE:-
+      ON SUBMIT INDICATED WHEN WE CLICK SUBMIT
+      THE LABEL FOR AND ID SHOULD HAVE SAME VALUE -->
+
+      <!-- HERE,
+      onkeydown, onkeyup, etc are the the event and the respective fnameValidation(), etc are user defined Function
+
+      span id works to show error message if there is NOTHING. SHOWS ERROR IF LEFT UNFILLED -->
+
+
+
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" onkeydown="lnameValidation()">
+      <span id="lname_message"></span><br>
+      <br>
+
+      <label for="age">Age:</label>
+      <input type="text" id="lname" onkeypress="ageValidation()">
+      <span id="age_message"></span><br>
+      <br>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" onkeyup="emailValidation()">
+      <span id="email_message"></span><br>
+      <br>
+
+      <!-- 
+      Note:-
+      IF 
+      <input type="email" id="fname"><br>, it automatically validates it. we are using input type text just to check the validity throuh js -->
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" onkeyup="passwordValidation()">
+      <span id="password_message"></span><br>
+
+      <input type="submit" id=""><br>
+   </form>
+
+
+
+
+
+
+   <script src="./Day34(Form Validation In JS).js"></script>
+</body>
+
+</html>

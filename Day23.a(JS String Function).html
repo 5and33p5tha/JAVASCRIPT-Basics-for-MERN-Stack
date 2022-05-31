@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS : String Functions</title>
+  </head>
+
+  <body>
+    <pre>
+
+
+        String Functions in JS:-  
+        -> Length
+        ->  Slice 
+        ->  substr 
+        ->  substring 
+        ->  to Upper 
+        ->  to Lower 
+        ->  index of 
+        ->  lastIndexOf 
+        ->  replace 
+        ->  concat 
+
+
+    </pre>
+
+    <script>
+      // NOTE:-
+      // THE INDEX STARTS FROM ZERO FOR ALL I.E COUNTIONG STARTS FROM 0
+
+      //LET str Represent The Following String
+      let str =
+        "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing.";
+      document.write(str);
+
+      //To Get The String Length
+      document.write(`<br>`);
+      document.write(`<br>Example Of STR.Length`);
+      document.write(`<br>`);
+      document.write(`<br>string length = ${str.length}`);
+
+      //To Get The String Slice (Start, End))
+      document.write(`<br>`);
+      document.write(`<br>Example Of STR.SLICE A`);
+      document.write(`<br>`);
+      document.write(`<br>string length = ${str.slice(6, 10)}`); //Slice Excludes the last character. This Also takes negative value. i.e if negative is given, counting starts from reverse.
+      //Slice Displays Character fom that position upto previous of last value.
+      // Here 0,1,2,3,4,5 is skipped, Starts from 6 and goes upto (10-1) i.e 9th Term
+      document.write(`<br>`);
+
+      document.write(`<br>Example Of STR.SLICE B`);
+      document.write(`<br>`);
+      document.write(`<br> ${str.slice(-10, -6)}`); // The negative Counting starts from -1, The Smaller Number Should Be At First i.e -10<-6.
+      //Slice Displays Character fom that position upto previous of last value.
+
+      // To Get substring(Start, End)
+      document.write(`<br>`);
+      document.write(`<br>Example Of STR.STRING`);
+      document.write(`<br>`);
+      document.write(`<br> ${str.substring(6, 10)}`); //Same as STR.SLICE but str.substring doesn`t take negative value
+
+      // To Get substr(Start, Length)
+      document.write(`<br>`);
+      document.write(`<br>Example Of STR.STR`);
+      document.write(`<br>`);
+      document.write(`<br> ${str.substr(6, 10)}`); //It  goes from a defined term to the given length term
+
+      // To Get ToUpperCase(str.toUpperCase)
+      document.write(`<br>`);
+      document.write(`<br>Example Of To Upper`);
+      document.write(`<br>`);
+      document.write(`<br> ${str.toUpperCase()}`); //It  CHANGES THE STRING TO UPPER CASE
+      // While Using Function Method, While Calling WE NEED PARANTHESIS
+      //HERE WHATEVER WILL BE INSIDE THE () IS ARGUMENT
+      //PARENTHESIS IS THE () ITSELF.
+
+      //To Get ToLowerCase(str.toUpperCase)
+      let a = "HAHAHAHA";
+      document.write(`<br>`);
+      document.write(`<br>Example Of To Lower`);
+      document.write(`<br>`);
+      document.write(`<br> ${a.toLowerCase()}`); //It  CHANGES THE STRING TO LOWER CASE
+      // While Using Function Method, While Calling WE NEED PARANTHESIS
+      //HERE WHATEVER WILL BE INSIDE THE () IS ARGUMENT
+      //PARENTHESIS IS THE () ITSELF.
+
+      //To SEARCH index of (indexof())
+      document.write(`<br>`);
+      document.write(`<br>Example Of INDEXOF`);
+      document.write(`<br>`);
+      document.write(`<br> ${str.indexOf("olo")}`); //It shows the position of first occurence of given  value.
+      //HERE, The POSITION OF THE FIRST OCCURING "olo" IN LOREM IPSUM... IS DISPLAYED
+      // This is CASE SENSITIVE
+
+      //To SEARCH Last Index of (lastindexof())
+      document.write(`<br>`);
+      document.write(`<br>Example Of LASTINDEXOF`);
+      document.write(`<br>`);
+      document.write(`<br> ${str.lastIndexOf("olo")}`); //It shows the position of last occurence of given  value.
+      //HERE, The POSITION OF THE FINAL OCCURING "olo" IN LOREM IPSUM... IS DISPLAYED
+      // This is CASE SENSITIVE
+
+      //To REPLACE
+      let m =
+        "GOOD EVENING MONSURE BOND! Good Bye Mister Bond. This is it for bond. This is the last of what we will hear from Bond!";
+      document.write(`<br>`);
+      document.write(`<br>Example Of REPLACE`);
+      document.write(`<br>`);
+      document.write("<br>", m.replace("Bond", "STARK")); // This Is CASE SENSITIVE, WILL REPLACE THE FIRST OCCURING "Bond" With STARK
+      document.write(`<br>`);
+      document.write("<br>", m.replace(/Bond/g, "STARK")); // This Is CASE SENSITIVE, WILL REPLACE THE ALL OCCURING "Bond" With STARK
+      document.write(`<br>`);
+      document.write("<br>", m.replace(/Bond/i, "STARK")); // This Is CASE INSENSITIVE, WILL REPLACE THE FIRST OCCURING "Bond" With STARK
+      document.write(`<br>`);
+      document.write("<br>", m.replace(/Bond/gi, "STARK")); // This Is CASE INSENSITIVE, WILL REPLACE THE ALL OCCURING "Bond" With STARK
+
+      //CAN ALSO BE WRITTEN AS document.write("<br>", m.replace(/Bond/ig, "STARK")) // This Is CASE INSENSITIVE, WILL REPLACE THE ALL OCCURING "Bond" With STARK
+
+      //To CONCATINATE i.e To JOIN TWO STRINGS
+      document.write(`<br>`);
+      document.write(`<br>Example Of CONCATNATION`);
+      document.write(`<br> The Initial String IS <br>`);
+      document.write(`${m}`);
+      document.write(`<br>`);
+      document.write("<br>" + m.concat(" BANANARAMA")); //It ADDS BANANARAMA AT THE END IN  GIVEN STRING m
+    </script>
+  </body>
+</html>

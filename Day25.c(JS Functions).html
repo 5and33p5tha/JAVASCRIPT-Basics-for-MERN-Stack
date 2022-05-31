@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS : Functions and ARROW FUNCTION</title>
+  </head>
+
+  <body>
+    <pre>
+
+      ALL THESE CODES WE ARE DOING ARE VANILLA JS
+
+
+
+      Syntax:-
+function function_name(arguments..){
+   statements
+   return
+}
+function_name(arguments..)
+  
+
+
+
+
+    </pre>
+
+    <script>
+      // arrow function
+      // const function_name = (arguments) => {
+      //     statements
+      //     return
+      // }
+
+      //To ADD TWO NUMBERS
+      function add(x, y) {
+        //THIS IS HOW WE DEFINE FUNCTION IN JS TYPICALLY. WE CAN ALSO USE ARROW FUNCTION WHICH IS MORE PREFERRED
+        result = x + y;
+        return result;
+
+        //These two can be merged as follows:
+        //return(x+y)
+      }
+
+      c = add(2, 3);
+      document.write(`<br>`);
+      document.write(c, " This Is The Addition of variable c");
+      document.write(`<br>`);
+      document.write(`<br>`);
+      document.write(add(4, 5), "This Is The Addition of add(4,5)");
+      document.write(`<br>`);
+
+      //ALTERNATIVELY IN ARROW FUNCTION
+
+      // const plus = m => m+m          //THIS IS IF WE WANT TO PRINT THE ADDITION OF ONLY A NUMBER TO ITSELF ONLY
+      const plus = (m, n) => {
+        //THIS IS THE ARROW FUNCTION METHOD IN JS
+        val = m + n;
+        return val;
+      };
+
+      k = plus(6, 7);
+      document.write(`<br>`);
+      document.write(k, " This Is The Addition of variable k");
+      document.write(`<br>`);
+      document.write(`<br>`);
+      document.write(plus(9, 8), "This Is The Addition of adds(9, 9)");
+      document.write(`<br>`);
+
+      // const add = x => x+x
+
+      //To find factorial of a number
+      function fact(num) {
+        if (num === 1) {
+          return 1;
+        } else if (num === 0) {
+          return 0;
+        } else {
+          return num * fact(num - 1);
+        }
+      }
+
+      document.write(`<br>`);
+      document.write(`<br>`);
+      let n = Number(prompt("Enter a number")); //Here, let n does not necessaritly need to match the function name fact(num). It is Just optional
+      //Can also be written as      let num = Number(prompt("Enter a number"))
+
+      document.write(`The Factorial of ${n} is ${fact(n)}`); //Here, ${facr(n)} does not necessaritly need to match the function name fact(num). It is Just optional
+      //BUT IT NEEDS TO MATCH THE DECLARED VARIABLE.
+      // document.write(`The Factorial of ${num} is ${fact(num)}`) //CAN BE DONE IF LET NUM WAS DECLARED
+
+      //JUST THE FUNCTION NAME i.e. FACT needs to match. The parenthesis (n) or or (num) does not need to match.
+      // if function fact(num)
+      // ...
+      // then while calling,
+      // document.write(`The Factorial of ${n} is ${fact(n)}`), here the value of parenthesis (n) will pass to (num), hence it works
+
+      //ALTERNATIVELY TO FIND FACTORIAL IN ARROW FUNCTION
+      // const factorial=(num)=>{
+      // let f=1
+      // for (i=1, i<num; i++;) //IN JS, WE CAN ONLY USE UPTO THREE TERMS IN FOR LOOP
+      //  {
+      //    document.write(`<br>`)
+      //       document.write(`<br>`)
+      //       let n = Number(prompt("Enter a number"))        //Here, let n does not necessaritly need to match the function name fact(num). It is Just optional
+      //       //Can also be written as      let num = Number(prompt("Enter a number"))
+      //    document.write(`The Factorial of ${n} is ${factorial(n)}`) //Here, ${factorial(n)} does not necessarily need to match the function name factorial(num). It is Just optional
+      //       //BUT IT NEEDS TO MATCH THE DECLARED VARIABLE.
+      //    }
+      // }
+
+      //return 1, 0 EXAMPLE:-
+      // THIS IS JUST A PSEUDO CODE
+      //    function load() {
+      //       if (database is loaded) {
+      //          return 1
+      //       }
+
+      //       if (database is  not loaded) {
+      //          return 0
+      //       }
+      //    }
+
+      //    c = load()
+      //    if (c == 1) {
+      // data loaded
+      //    }
+
+      //    if (c == 0) {
+      // data not loaded
+      //    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS : map/forEach Function</title>
+  </head>
+
+  <body>
+    <pre>
+
+     MAP FUNCTION IS THE LOOP FUNCTION USED FOR ARRAY
+     FOREACH AND MAP ARE THE SAME FUNCTIONS
+
+
+     THIS WILL BE USED TO PUT VALUES FROM DATABASE INTO THE GIVEN AREA (SAY CARD FUNCTION)
+  
+
+
+
+
+    </pre>
+
+    <h3 id="tag"></h3>
+    <!-- <h2 id="tag">List</h2> -->
+
+    <h1 id="lag">LIST</h1>
+
+    <h5 id="Nag">LIST</h5>
+
+    <script>
+      //WILL BE DISPLAYED FORTH
+      let a = [
+        "Carrot",
+        "Tomato",
+        "Grapes",
+        "Banana",
+        "Apple",
+        "Orange",
+        "Mango",
+      ];
+
+      //map, forEach
+      for (i = 0; i < a.length; i++) {
+        document.write(`<li>${a[i]}</li>`);
+      }
+      document.write(`<br>`);
+
+      //WILL BE DISPLAYED FIFTH
+      let b = [
+        "Carrot",
+        "Tomato",
+        "Grapes",
+        "Banana",
+        "Apple",
+        "Orange",
+        "Mango",
+      ];
+      document.write(`<br>`); // The item passes all values of array b in map function i.e it takes it one by one
+      b.map((item) => {
+        //Item is the value inside array B
+        document.write(`<li>${item}</li>`); // all the items are printed
+      });
+
+      //WILL BE DISPLAYED FIRST
+      let c = [
+        "Carrot",
+        "Tomato",
+        "Grapes",
+        "Banana",
+        "Apple",
+        "Orange",
+        "Mango",
+      ];
+      document.getElementById("tag").innerHTML = ""; //This empty quote prints empty in whatever the h2 contains
+      //Examle <h2 id="tag">List</h2>, Here the list would be printed once before Carrot. So We passed empty to remove list from printing
+      c.map((item) => {
+        //INSTEAD OF MAP, WE CAN ALSO USE FOR EACH LIKE  c.forEach((item) => {
+        document.getElementById("tag").innerHTML += `<br>${item}`;
+        // document.write(`<li>${item}</li>`)      THIS IS TO LIST. THIS WILL DISPLAY THE CONTENTS WITH BULLETS
+      });
+
+      // WILL BE DISPLAYED SECOND
+      let d = [
+        "Carrot",
+        "Tomato",
+        "Grapes",
+        "Banana",
+        "Apple",
+        "Orange",
+        "Mango",
+      ];
+      document.getElementById("lag").innerHTML = ""; //This empty quote prints empty in whatever the h2 contains
+      //Examle <h2 id="tag">List</h2>, Here the list would be printed once before Carrot. So We passed empty to remove list from printing
+      d.map((item) => {
+        //INSTEAD OF MAP, WE CAN ALSO USE FOR EACH LIKE  c.forEach((item) => {
+        // document.getElementById("lag").innerHTML += `<br>${item}`
+        document.getElementById("lag").innerHTML += `<li>${item}</li>`; //THIS IS TO LIST. THIS WILL DISPLAY THE CONTENTS WITH BULLETS
+      });
+
+      //WILL BE DISPLAYED THIRD
+      let e = [
+        "Carrot",
+        "Tomato",
+        "Grapes",
+        "Banana",
+        "Apple",
+        "Orange",
+        "Mango",
+      ];
+      document.getElementById("Nag").innerHTML = "";
+      e.map(function disp(item) {
+        document.getElementById("Nag").innerHTML += `<br>${item}</br>`;
+      });
+    </script>
+  </body>
+</html>

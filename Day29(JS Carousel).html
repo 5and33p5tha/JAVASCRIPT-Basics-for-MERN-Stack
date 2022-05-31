@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS : Carousel</title>
+
+    <style>
+      .container {
+        width: 75%;
+        height: 400px;
+        margin: auto;
+        background-color: aquamarine;
+        position: relative;
+      }
+
+      .left,
+      .right {
+        position: absolute;
+        top: 45%;
+      }
+
+      .right {
+        right: 0px;
+      }
+
+      .left {
+        left: 0px;
+      }
+
+      .container img {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body onload="load()">
+    <!-- ONLOAD IS THE EVENT AND LOAD IS CALLING OF OUR CUSTOM FUNCTION -->
+    <!-- EVENT AS IN WHEN WE CLICK MOUSE BUTTON -->
+
+    <pre>
+
+
+         The JS is used to create the carousel effect as in bootstrap
+  
+
+    </pre>
+
+    <div class="container">
+      <img src="" alt="" id="slider_img" />
+      <!-- <button class="left">left</button> -->
+      <button class="left" onclick="previous()">&lt</button>
+
+      <!-- here, onclick is the event and previou is our CUSTOM JS FUNCTION -->
+      <!-- Symbol For Less Than -->
+
+      <!-- <button class="right">right</button> -->
+      <button class="right" onclick="next()">&gt</button>
+      <!-- here, onclick is the event and next is our CUSTOM JS FUNCTION -->
+      <!-- Symbol For Greater Than -->
+    </div>
+
+    <script>
+      //WILL BE DISPLAYED FORTH
+    </script>
+
+    <script src="../JavaScript/Day29(JS Carousel).js"></script>
+  </body>
+</html>

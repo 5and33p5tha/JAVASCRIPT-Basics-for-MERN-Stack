@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS : Conditional Statements</title>
+</head>
+
+<body>
+
+    <pre>
+        Conditional Statements:-
+
+
+        1. If Condition - One Condition
+        2. If-Else - Two Condition
+        3.If-Else If-Else ...If-Else - More Than Two Conditions
+        4. Nested If-Else -  If-Else inside of If-Else
+    </pre>
+
+
+    <script>
+
+
+
+
+
+        document.write(`Example 1:-`)
+        document.write(`<br>`)
+        let a = 5
+        if (a == 5)
+            document.write(`${a} is equal to 5`)
+        document.write(`<br>`)
+
+
+
+
+
+        document.write(`<br>`)
+        document.write(`Example 2:-`)
+        document.write(`<br>`)
+        let b = 6, c = 7
+        if (b > c) {
+            document.write(`${b} is greater than ${c}`)
+        }
+        else {
+            document.write(`${c} is greater than ${b}`)
+        }
+        document.write(`<br>`)
+
+
+
+
+
+        document.write(`<br>`)
+        document.write(`Example 3:-`)
+        document.write(`<br>`)
+        let d = 9, e = 9
+        if (d > e) {
+            document.write(`${d} is greater than ${e}`)
+        }
+        else if (e > d) {
+            document.write(`${e} is greater than ${d}`)
+        }
+        else {
+            document.write(`${d} and ${e} are EQUAL`)
+        }
+        document.write(`<br>`)
+
+
+
+
+
+        //To find the greatest of 3 numbers
+        document.write(`<br>`)
+        document.write(`Example 4:-`)
+        document.write(`<br>`)
+        let t = 5, u = 4, v = 6
+        if (t > u) {
+            if (t > v) {
+                document.write(`${t} is greatest`)
+            }
+            else {
+                document.write(`${v} is greatest`)
+            }
+        }
+        else {
+            if (u > v) {
+                document.write(`${u} is greatest`)
+            }
+            else {
+                document.write(`${v} is greatest`)
+            }
+        }
+
+        document.write(`<br>`)
+
+
+
+
+
+        //to find the greatest 4 numbers
+        document.write(`<br>`)
+        document.write(`Example 5:-`)
+        let w = 4, x = 3, y = 5, z = 2
+        if (w > x && w > y && w > z) {
+            document.write(`<br>`)
+            document.write(`${w} is the greatest`)
+        }
+
+
+        // Note:- Multiple If statements check all IF cases.
+        // BUT ELSE IF CHECKS ONLY UPTO THE CORRECT ANSWER. i.e IF THE OUTPUT IS TRUE, THE OTHER CONDITIONS ARE SKIPPED. 
+
+
+        else if (x > w && x > y && x > z) {
+            document.write(`<br>`)
+            document.write(`${x} is the greatest`)
+        }
+
+
+        else if (y > w && y > x && y > z) {
+            document.write(`<br>`)
+            document.write(`${y} is the greatest`)
+        }
+
+
+        else {
+            document.write(`<br>`)
+            document.write(`${z} is the greatest`)
+        }
+        document.write(`<br>`)
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

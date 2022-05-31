@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>functions</title>
+  </head>
+
+  <body>
+    <script>
+      // arrow function
+      // const function_name = (arguments) => {
+      //     statements
+      //     return
+      // }
+
+      // function function_name(argumnents..){
+      //     statements
+      //     return
+      // }
+      // function_name(arguments..)
+
+      // to add 2 numbers
+      // function add(x, y) {
+      //     result = x + y
+      //     return result
+      // }
+
+      // const add = (x,y) => {
+      //     result = x+y
+      //     return result
+      // }
+
+      // const add = x => x+x
+
+      // factorial function
+      // function factorial(num){
+      //     let f=1
+      //     for(i=1;i<=num;i++){
+      //         f=f*i
+      //     }
+      //     return f
+      // }
+
+      const factorial = (num) => {
+        let f = 1;
+        for (i = 1; i <= num; i++) {
+          f = f * i;
+        }
+        return f;
+      };
+
+      // function fact(num){
+      //     if(num === 1){
+      //         return 1
+      //     }
+      //     else if(num === 0){
+      //         return 1
+      //     }
+      //     else {
+      //         return (num*fact(num-1))
+      //     }
+      // }
+
+      // let n=Number(prompt("enter a number to find factorial"))
+      // document.write(`Factorial of ${n} is ${fact(n)}`)
+
+      c = add(2, 3);
+      document.write(c);
+
+      document.write("<br>", (a, b) => a + b);
+      //Can Also Write:-       // document.write("<br>"+ (a, b) => a + b); BUT AS + IS USED AS OPERATOE, BETTER TO USE , AFTER <BR>
+      //THE MOST EFFECTIVE WAY IS TO WRITE USING LITERAL TEMPLATES
+
+      //return 1 , 0
+
+      //     function load() {
+      //         if (database is loaded) {
+      //             return 1
+      //         }
+      //         if (database is not loaded) {
+      //             return 0
+      //         }
+      //     }
+
+      //     c = load()
+      //     if (c == 1) {
+      //         data loaded
+      //     }
+      //     else{
+      // data not loaded
+      //     }
+
+      // factorial, sum of 5numbers input by user
+    </script>
+  </body>
+</html>

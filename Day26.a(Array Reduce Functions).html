@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reduce</title>
+  </head>
+  <body>
+    <script>
+      let a = [10, 20, 30, 40, 100];
+
+      let b = [10, 20, 30, 40, 100];
+
+      let sum = a.reduce((accumulator, current_value) => {
+        document.write(
+          `accumulator = ${accumulator} current_value=${current_value} <br>`
+        );
+        return accumulator + current_value;
+        //How It Works:-
+        // Initially:-
+        // accumulator = current_value
+        //Then
+        // accumulator = accumulator + current value
+      });
+      document.write(`Sum is = ${sum}`);
+
+      document.write(`<br>`);
+      document.write(`<br>`);
+
+      let diff = b.reduceRight((acc, crt_val) => {
+        document.write(`acc = ${acc} crt_val=${crt_val} <br>`);
+        return acc - crt_val;
+        //How It Works:-
+        // Initially:-
+        // acc = crt_val as reduce right, RIGHT MOST IS 100, SO INITIALLY 100
+        //Then
+        // acc = acc - crt val
+      });
+
+      document.write(` <br>diff = ${diff}`);
+
+      // document.write(` <br>sum = ${sum}`)
+    </script>
+  </body>
+</html>

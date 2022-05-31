@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Message on Mouse Hover</title>
+</head>
+
+<body>
+
+    <label for="demo">Password</label>
+    <input type="password" id="demo" onfocus="changeColor()">
+    <!-- ON FOCUS MEANS WHEN CLICKED ON FIELD.  -->
+
+
+
+    <!-- THE HIDE DATE AND TIME OR SHOW WILL TAKE PLACE HERE AS WE HAVE SET IT UP HERE. ALL THE EVENTS ARE CREATED HERE AND DESCRIBED LATER -->
+    <label onmouseenter="showDate()" onmouseleave="hideDate()">Show Date And Time</label>
+    <!-- CAN ALSO SET AS ONMOUSEOUT HERE -->
+
+    <h1 id="ti"></h1>
+
+
+
+
+
+
+    <script>
+        function showDate() {
+            let today = new Date()
+            document.getElementById("ti").innerHTML = today
+        }
+
+
+        //HIDE DATE IS NECESSARY OR ELSE, IT WILL KEEP DISPLAYING IT
+        function hideDate() {
+            document.getElementById("ti").innerHTML = ""
+        }
+        // TO DISPLAY NEW TIME EVERY SECOND= I.E TO MAKE A TICKING CLOCK, WE HAVE TO USE SET INTERVAL AS IN FATE FUNCTION PREVIOUSLY
+
+
+
+        //THIS is to change ONFOCUS
+        function changeColor() {
+            document.getElementById("demo").style.backgroundColor = "skyblue"
+            document.getElementById("demo").style.Color = "white"
+        }
+        // WHEN CLICKED, THIS WILL CHANGE THE BACKGROUND COLOR TO SKYBLUE
+
+    </script>
+</body>
+
+</html>

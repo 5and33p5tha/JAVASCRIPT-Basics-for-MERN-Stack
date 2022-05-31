@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JS : Switch Cases (Number As An Input Value)</title>
+</head>
+
+<body>
+
+   <pre>
+        Switch Cases:-
+
+
+        Instead of multiple if-else statements, the switch case makes such operations much easier
+    </pre>
+
+
+   <script>
+
+
+
+
+
+      document.write(`Example 1:-`)
+      let a = Number(prompt(`Enter a Number`))
+      switch (a) {
+         case 1:
+            document.write(`Today is Sunday`)
+            break
+
+
+         //If break is not used, the statements after this are also executed
+         //that is even if the desired output is displayed, the cases after that are also displayed
+
+
+         case 2:
+            document.write(`Today is Monday`)
+            break
+
+
+         case 3:
+            document.write(`Today is Tuesday`)
+            break
+
+
+         case 4:
+            document.write(`Today is Wednesday`)
+            break
+
+
+         case 5:
+            document.write(`Today is Thursday`)
+            break
+
+
+         case 6:
+            document.write(`Today is Friday`)
+            break
+
+
+         case 7:
+            document.write(`Today is Saturday`)
+            break
+
+
+         default:
+            document.write(`Error in Input`)
+
+      }
+      document.write(`<br>`)
+
+
+
+
+
+   </script>
+
+</body>
+
+</html>

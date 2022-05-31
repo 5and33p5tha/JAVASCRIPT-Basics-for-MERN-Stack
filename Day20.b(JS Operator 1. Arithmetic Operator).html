@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Basics : Operator part 1</title>
+  </head>
+
+  <body>
+    <div id="demo"></div>
+
+    <pre>
+        Operators:-
+
+
+        1. Arithmetic Operators:-
+        +,-,*,/,%,**
+
+        
+        Here:- 
+        ** is for power
+    </pre>
+
+    <script>
+      // Example 1:-
+      document.write("Example 1 <br>");
+      var a = 4;
+      document.write(a + "<br>");
+
+      {
+        var a = "";
+        document.write(a + "<br>");
+
+        //    Note:- If Let  or Const is outside the block scope, we cannot use var in block scope
+      }
+
+      document.write(a + "<br>");
+
+      //    Example 2:-
+      document.write("<br>");
+      document.write("Example 2 <br>");
+      let b = 40;
+      document.write(b + "<br>");
+
+      {
+        b = 50;
+        document.write(b + "<br>");
+
+        //    Note:- If Let  or Const is outside the block scope, we cannot use var in block scope
+      }
+
+      document.write(b + "<br>");
+
+      //    Example 3:-
+      document.write("<br>");
+      document.write("Example 3 <br>");
+      let c = 700;
+      document.write(c + "<br>");
+
+      {
+        let c = 4600;
+        document.write(c + "<br>");
+
+        //    Note:- If Let  or Const is outside the block scope, we cannot use var in block scope
+      }
+
+      document.write(c + "<br>");
+
+      //    Example 4:-
+      document.write("<br>");
+      document.write("Example 4 <br>");
+      let d = 616;
+      d += 200;
+      //This is equal to d=d+200
+      document.write("d= " + d + "<br>");
+
+      //    Example 5:-
+      document.write("<br>");
+      document.write("Example 5 <br>");
+      let e = 999;
+      document.write(`${e} <br>`); //Standard Way of Writing, called Template Literals
+      // Can Be Written As document.write(a + "<br>")
+
+      {
+        e = "name";
+        // As nothing is defined in front of e, it becomes VAR
+        // This is a GLOBAL SCOPE  as VAR IS A GLOBAL SCOPE
+        // Hence, IF WE PRINT THIS OUTSIDE OF THE BLOCKSCOPE THEN THE NEW VALUE IS TAKEN
+
+        document.write(`The value of e is ${e} <br>`);
+      }
+
+      document.write(`The value of e is ${e} <br>`);
+
+      //    Example 6:-
+      document.write("<br>");
+      document.write("Example 6 <br>");
+      let f = 91939;
+      document.write(`${e} <br>`); //Standard Way of Writing, called Template Literals
+      // Can Be Written As document.write(a + "<br>")
+
+      {
+        let f = "BATMAN";
+        document.write(`The value of f is ${f} <br>`);
+      }
+
+      document.write(`The value of f is ${f} <br>`);
+
+      //    Example 7:-
+      document.write("<br>");
+      document.write("Example 7 <br>");
+      var g = 666;
+      document.write(`${g} <br>`); //Standard Way of Writing, called Template Literals
+      // Can Be Written As document.write(a + "<br>")
+
+      {
+        var g = "BATMAN";
+        document.write(`The value of g is ${g} <br>`);
+      }
+
+      var g = "Its actually THE BATMAN";
+      document.write(`The value of g is ${g} <br>`);
+
+      //    Example 8:-
+      document.write("<br>");
+      document.write("Example 8 <br>");
+      document.write("<br>");
+      document.write("Example 1:- <br>");
+      let xs = 770;
+      document.write("The Value of xs is", xs + "<br>");
+      let y = 101;
+      document.write("The Value of y is" + y, "<br>");
+      y %= 2;
+      document.write("The  New Value of y is", y, "<br>");
+      //i.e f = f % i.e MOD 2
+      // 101/2 = 50 with remainder 1, so f=1
+      let z = xs + y;
+      document.write("The Sum = ", z + "<br>");
+      document.write("The Difference = " + (xs - y) + "<br>");
+      document.write("The Product = " + xs * y + "<br>");
+
+      //    Note, we can use , as well instead of plus
+      document.write("The divident = ", xs / 77, "<br>");
+      document.write("The quotient = " + (xs % 2), "<br>");
+      document.write("The exponent = ", xs ** y + "<br>");
+
+      //    For Concatination:-
+      document.write("The Concatination = " + xs + y + "<br>");
+
+      //     Note: -
+      //         For Concatination, use same operator
+      //    It is an\ standard practice to use + as concatination
+    </script>
+  </body>
+</html>

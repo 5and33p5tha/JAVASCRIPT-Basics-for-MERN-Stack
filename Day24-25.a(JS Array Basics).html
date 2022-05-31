@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS : Array Basics</title>
+  </head>
+
+  <body>
+    <pre>
+       These are the basic array functions in JS
+      Please Note:
+
+      Let or Const CANNOT BE DEFINED AGAIN UNLESS IN BLOCK i.e in {}
+
+
+      But VAR CAN BE REPLACE OR DEFINED AGAIN AS IT IS GLOBAL ELEMENT
+    </pre>
+
+    <script>
+      let a = ["apple", "radish", "carrot", "grapes"];
+      document.write(a); //Print Array
+      document.write(`<br>`);
+      document.write(`<br> ${a[0]}`); // Print Individual Element
+      document.write(`<br>`);
+      document.write(`<br> ${a[a.length - 1]}`); //Print The Last element Of Array
+      document.write(`<br>`);
+      document.write(`<br> ${a.length}`); //Print The Length Of Array
+      document.write(`<br>`);
+      document.write(`<br> ${a.length - 1}`); //Print The Length Upto Second Last Element Of Array
+
+      //To add element in an array
+      document.write(`<br>`);
+      let b = a;
+      b.push("banana");
+      document.write(`<br> ${a}`); //AS B=A, THIS PRINTS THE ARRAY AFTER ADDITION OF "GRAPES" IN ARRAY A
+      document.write(`<br> ${b}`); //THIS PRINTS THE B. THIS PRINTS THE ARRAY AFTER ADDITION OF "GRAPES" IN ARRAY A
+      document.write(`<br>`);
+
+      //To remove element in an arrray
+      document.write(`<br>`);
+      a.pop();
+      document.write(`${a}`);
+      document.write(`<br>`);
+      document.write(`${a.length}`);
+      document.write(`<br>`);
+
+      //Alternatively, To remove Specific element in an array. TO REPLACE THAT ELEMENT BY BLANK AS TO SAY, THE SIZE OF ARRAY DOESN'T CHANGE
+      document.write(`<br>`);
+      a[2] = "";
+      document.write(`<br> ${a}`);
+      document.write(`<br>`);
+      document.write(`${a.length}`);
+      document.write(`<br>`);
+
+      //To Sort The Array
+      document.write(`<br>`);
+      a.sort();
+      document.write(`${a}`);
+      document.write(`<br>`);
+
+      document.write(`<br>`);
+      document.write(`${a}`);
+      document.write(`<br> ${a.length}`); //length
+      a.pop();
+      document.write(`<br> ${a}`); // print array
+      document.write(`<br> ${a.length}`); //length
+      document.write(`<br>`);
+
+      //To Sort And Remove
+      document.write(`<br>`);
+      a.sort().reverse();
+      document.write(`${a}`);
+      document.write(`<br>`);
+      document.write(`${a.length}`);
+
+      delete a[1];
+      document.write(`<br>`);
+      document.write(`<br> ${a}`); // print array
+      document.write(`<br> ${a.length}`); //length
+
+      //These will add the element in given array index. IF THERE ALREADY EXISTS THAT ELEMENT, IT WILL REPLACE IT
+      document.write(`<br>`);
+      a[3] = "mango"; //ADD MANGO in array index 3 AS THER IS ONLY UPTO 2, I.E 0-1-2
+      a[0] = "peach"; //REPLACE GRAPES WITH PEACH in array index 0
+      document.write(`<br> ${a}`); // Print array
+      document.write(`<br>`);
+      document.write(`${a.length}`); //print array length
+      document.write(`<br>`);
+    </script>
+  </body>
+</html>

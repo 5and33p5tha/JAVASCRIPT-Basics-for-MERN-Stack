@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>filter</title>
+  </head>
+  <body>
+    <!-- <h2 id="tag">list</h2> -->
+
+    <script>
+      document.write(`Example of Filter`);
+      //filter - filter filters the data and returns values that satisfies the condition
+      let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 4, 3, 2, 1];
+      let b = a.filter((item) => item < 5);
+      document.write(b);
+      document.write(`<br>`);
+      document.write(`<br>`);
+      document.write(`<br>`);
+
+      document.write(`Example of Find`);
+      // find - finds the data in the array and returns item
+      let fruit = [
+        "apple",
+        "banana",
+        "carrot",
+        "radish",
+        "grapes",
+        "mango",
+        "orange",
+      ];
+      let search = window.prompt("enter a fruit to check"); //prompt lets us enter the value and it will put that i.e store that in search
+      if (fruit.find((item) => item === search)) {
+        // === means it should be exactly equal to i.e value and even the data type
+        document.write(`<br>`);
+        document.write(`<br>`);
+        document.write(
+          search +
+            " is found at index " +
+            fruit.findIndex((item) => item === search)
+        );
+      } else {
+        document.write(`<br>`);
+        document.write(`<br>`);
+        document.write(search + " is not found");
+      }
+    </script>
+  </body>
+</html>

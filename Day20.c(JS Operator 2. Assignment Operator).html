@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Basics : Operator part 1</title>
+  </head>
+
+  <body>
+    <pre>
+        Operators:-
+
+
+        2. Assignment Operators:-
+        +,-,*,/,%,**
+
+        
+        Here:- 
+        ** is for power
+Op:-   Ex:-       As:-
+=	x = y	x = y
++=	x += y	x = x + y
+-=	x -= y	x = x - y
+*=	x *= y	x = x * y
+/=	x /= y	x = x / y
+%=	x %= y	x = x % y
+<<=	x <<= y	x = x << y
+>>=	x >>= y	x = x >> y
+>>>=	x >>>= y	x = x >>> y
+&=	x &= y	x = x & y
+^=	x ^= y	x = x ^ y
+|=	x |= y	x = x | y
+**=	x **= y	x = x ** y
+    </pre>
+
+    <h3>The = Operator</h3>
+
+    <p id="demo1"></p>
+
+    <h3>The += Operator</h3>
+
+    <p id="demo2"></p>
+
+    <h3>The *= Operator</h3>
+
+    <p id="demo3"></p>
+
+    <h3>The %= Operator</h3>
+
+    <p id="demo4"></p>
+
+    <h3>The /= Operator</h3>
+
+    <p id="demo5"></p>
+  </body>
+
+  <script>
+    //Example 1
+    let x = 10;
+    document.getElementById("demo1").innerHTML = x;
+
+    //Example 2
+    let xy = 10;
+    xy += 5;
+    document.getElementById("demo2").innerHTML = xy;
+
+    //Example 3
+    let z = 10;
+    z *= 5;
+    document.getElementById("demo3").innerHTML = z;
+
+    //Example 4
+    let m = 10;
+    m %= 5;
+    document.getElementById("demo4").innerHTML = m;
+
+    //Example 5
+    let i = 10;
+    i /= 5;
+    document.getElementById("demo5").innerHTML = i;
+  </script>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS : Loops</title>
+  </head>
+
+  <body>
+    <pre>
+
+
+        Loops :-  
+        To Perform Same Tasks Repeatedly
+
+
+        3 Types:-
+         While Loop:- Check Statements And Then Executes Untill False. Not Executed Untill Statement Is True.
+
+            While Syntax:-
+               while(Condition){
+                  Statements
+                  Increase/Decrement
+               }
+
+
+
+
+
+         Do While Loop:- Executes Statement First And Then CHecks The Statements.
+
+             While Syntax:-
+             Initialization
+              do{
+                  Statements
+                 Increase/Decrement
+              }
+              while(Condition)
+
+
+
+
+
+
+         For Loop:- To Repeat Task Untill Certain Desired Loop Number Is Reached.
+              The Program Is Only Executed Untill The Statement Is True
+
+              For Syntax:-
+              for(Initialization; Condition; Increment/Decrement) 
+              {
+              STATEMENT
+              }
+
+
+           NOTE:-   ONLY THEAE AND NOT MORE THAN THESE I.E. ONLY FOR ONE VARIABLE
+                     NO PARENTHESIS
+
+
+
+
+           ALTERNATIVELY:-
+
+           INITIALIZATION 
+           FOR(CONDITION){
+              STATEMENT()
+              INCREMENT/DECREMENT
+           }
+
+
+    </pre>
+
+    <script>
+      document.write(`Example 1 While Loop:-`);
+      let a = 0;
+      document.write(`<br>`);
+      while (a < 10) {
+        document.write(`${a + 1}Hello <br>`);
+        a++;
+      }
+      document.write(
+        `As condition of a<10, This prints upto 10 terms as IT ALSO PRINTS FOR A=0 SO 0-9 EXECUTIONS i.e 10 TERMS <br>`
+      );
+      document.write(`<br>`);
+
+      document.write(`Example 2 do-while Loop:-`);
+      let b = 0;
+      document.write(`<br>`);
+
+      do {
+        document.write(` ${b + 1} Hello <br>`);
+        b++;
+      } while (b < 10);
+      document.write(
+        `As condition of b<10, This prints upto 10 terms EVEN IF THE PROGRAM IS FALSE, ATLEAST ONE EXECUTION TAKES PLACE BUT THE NO OF LOOPS IS SAME AS THAT OF WHILE LOOP <br>`
+      );
+      document.write(`<br>`);
+
+      document.write(`Example 3 While Loop:-`);
+      let c = 11;
+      document.write(`<br>`);
+      while (c < 10) {
+        document.write(`${c} <br>`);
+        c++;
+      }
+      document.write(`No Loops Are Executed as the conditions are false <br>`);
+      document.write(`<br>`);
+
+      document.write(`Example 4 do-while Loop:-`);
+      let d = 11;
+      document.write(`<br>`);
+
+      do {
+        document.write(` ${d}<br>`);
+        d++;
+      } while (d < 10);
+      document.write(
+        `As  ATLEAST ONE EXECUTION TAKES PLACE, 11 IS PRINTED EVEN IF THE PROGRAM IS FALSE <br>`
+      );
+      document.write(`<br>`);
+
+      document.write(`Example 5 For Loop:-`);
+      for (let e = 1; e < 10; e++) {
+        document.write(`<br>`);
+        document.write(`${e} Hello`);
+      }
+      document.write(`<br>`);
+      document.write(
+        `ONCE THE CONDITION IS FALSE, IT DIRECTLY SKIPS THE PROGRAM AND IS TERMINATED`
+      );
+      document.write(`<br>`);
+
+      document.write(`<br>`);
+      document.write(`Example 6 For Loop:-`);
+      for (let f = 0; f < 10; f++) {
+        if (f == 5) {
+          break;
+        }
+        document.write(`<br>`);
+        document.write(`${f} Hello`);
+      }
+      document.write(`<br>`);
+
+      document.write(`<br>`);
+      document.write(`Example 7 For Loop:-`);
+      for (let g = 1; g < 10; g++) {
+        if (g == 5) {
+          continue;
+        }
+        document.write(`<br>`);
+        document.write(`${g} Hello`);
+      }
+      document.write(`<br>`);
+      document.write(
+        `HERE, THE PROGRAM IS EXECUTED FOR 1,2,3,4 AND AS CONTINUE IS GIVEN IN 5, THE TERM 5 IS SKIPPED AND THEN OTHER VALUES RUN I.E PROGRAM CONTINUES FROM 6 LIKE 1,2,3,4,6,7,8,9`
+      );
+      document.write(`<br>`);
+
+      //while example
+      // let a=0                                 //initialization
+      // while(a<10){                            //checking condition
+      //     document.write(`hello <br>`)        //statement
+      //     a++                                 // increment
+      // }
+
+      // do while example
+      // let a = 11                                   //initialization
+      // a=100
+      // do{
+      //     document.write(`${a+1}. hello <br>`)    //statement
+      //     a++                                     //increment
+      // }while(a<10)                                //condition checking
+
+      // for example
+      // for(let a=1;a<10;a++)
+      //         {
+      //             if(a==5){
+      //                 continue;
+      //             }
+      //             document.write(`${a} hello `)
+      //         }
+    </script>
+  </body>
+</html>

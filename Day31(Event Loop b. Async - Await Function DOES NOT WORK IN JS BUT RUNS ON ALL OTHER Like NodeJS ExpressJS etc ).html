@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASYNC AWAIT FUNCTION</title>
+  </head>
+
+  <body>
+    <pre>
+      The event loop is the secret behind JavaScript’s asynchronous programming.
+JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading.
+Let’s take a look at what happens on the back-end.
+
+
+The call stack is responsible for keeping track of all the operations in line to be executed. Whenever a function is finished, it is popped from the stack.
+
+The event queue is responsible for sending new functions to the stack for processing. It follows the queue data structure to maintain the correct sequence in which all operations should be sent for execution.
+
+Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.
+
+An example of this is the setTimeout method. When a setTimeout operation is processed in the stack, it is sent to the corresponding API which waits till the specified time to send this operation back in for processing.
+
+Where does it send the operation? The event queue. Hence, we have a cyclic system for running async operations in JavaScript. The language itself is single-threaded, but the browser APIs act as separate threads.
+
+The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.
+
+
+   DUE TO THE INBUILT FRAMEWORK OF JS, ASYNC -AWAIT REQUIRES PROMISE FUNCTION. THIS IS ONLY FOR JS AND NOT FOR EXPRESSJS OR NODEJS
+
+
+    ASYNC AWAIT FUNCTION IS USED TO SYNC THE OUTPUTS OF TWO FUNCTIONS TO BE DISPLAYED IN SAME TIME IN MERGED FORM.
+
+
+   IMPORTANT:- *******    AS EACH TIME FUNCTION CALL BACK MAY NOT BE REQUIRED SO JUST TO CALL BACK WHEN WE WANT TO, WE USE ASYNC AND AWAIT FUNCTION
+
+    ASYNC AND AWAIT IS USED MOSTLY IN BACK END PROGRAMMING LIKE NODE JS AND EXPRESS JS
+
+      
+   </pre
+    >
+
+    <script>
+      let news = [
+        { newstitle: "First", newsdesc: "This is the First News" },
+        // Here, Everything inside {} are objects, JSON Objects to be more specifimport React, { Component } from 'react'
+        // JSON = JAVA SCRIPT OBJECT NOTATION
+        // newstitle is actually a KEY or PROPERTY or ATTRIBUTE and "first" is the KEYVALUE or VALUE
+
+        { newstitle: "Second", newsdesc: "This is the Second News" },
+
+        { newstitle: "Third", newsdesc: "This is the Third News" },
+      ];
+
+      // function shownews(){
+      // IN ARRAY FUNCTION
+
+      //THIS JUST PRINTS THE VALUES
+      //function shownews(){}
+      const shownews = () => {
+        //hre, we have empty brackets just to print as it is without any change
+        // IF NO ATTRIBUTE,SO EMPTY BRACKET. i.e NO VALUE IS PASSED.
+        // IF NO RETURN IS USED OR ONLY ONE STATEMENT, NOT NECESSARY TO USE CURLY BRACES and even parenthesis AND CAN BE WRITTEN DIRECTLY
+        // BOTH ARE NEEDED FOR RETURN AND/OR MULTIPLE STATEMENTS
+
+        // now to add timeout
+        setTimeout(
+          () => {
+            news.map((item) =>
+              document.write(`<li> ${item.newstitle}: ${item.newsdesc} </li>`)
+            );
+            // HERE, NEWSTITLE IS AN OBJECT SO IT MUST BE WRITTEN AS IT IS.
+            // WE HAVE PASSED VALUE OF 'NEWSTITLE' AND THE ':' AND THEN VALUE OF NEWSDESC
+          },
+          3000
+          //HERE 3000 IS 3000 MILLISECOND = 3 SECOND
+        );
+      };
+
+      //THIS WILL PUSH NEW DATA IN ARRAY
+      const addnews = (newdata) => {
+        //    PREVIOUSLY, const addnews = newdata=> {
+        //       as only one statement/object, so no parenthesis was necessary.
+        //       also, callback is our custom function to call it back
+        // // HERE NEWDATA IS WHERE THE V first and usedW push array function
+        // in classical manner
+        //function addnews(newdata){
+        setTimeout(
+          () => {
+            // to add timeout
+            news.push(newdata);
+          },
+          4000
+          // HERE 4000 IS 4 SEC
+        );
+      };
+
+      // WORKING OF SIMPLE addnews
+      // function add(x,y){}        normal function definitionBeforeMount(() => {
+      //    const add = (x,y)   arrow function definition
+
+      //    add(5+5)  function call
+
+      //to async and await
+      const demofunction = async (newdata) => {
+        await addnews(newdata);
+        shownews();
+      };
+
+      // addnews({ newstitle: "New", newsdesc: "New News" }, shownews)
+      //INSTEAD OF ADDNEWS, IN ASYNC-AWAIT WE CAN WRITE:
+      demofunction({ newstitle: "new", newsdesc: "added by async await" });
+
+      //the value of addnews has been pushed in news array via map
+      // shownews()
+
+      // //this works as follows:
+
+      // shownews = 3 sec
+      // addnews = starts after 3 sec, then works for another 4 second this will create a problem. so we have to write
+      // addnews({newstitle: "New", newsdesc:"New News"}, shownews)
+      // now, add news has called shownews again, i.e after 4 second, shownews will be called. this will stay for nect 3 second and then display final output
+
+      // THIS CAN BE DONE IN ANY ORDER
+      // EXAMPLE
+      // addnews({newstitle: "New", newsdesc:"New News"}, shownews)
+      // AND THEN
+      // shownews()
+      // OR EVEN, SHOWNEWS AFTER IS NOT NECESSARY
+    </script>
+  </body>
+</html>
