@@ -1,83 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS : Switch Cases (String As An Input Value)</title>
+  </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>JS : Switch Cases (String As An Input Value)</title>
-</head>
-
-<body>
-
-   <pre>
+  <body>
+    <pre>
         Switch Cases:-
 
 
         Instead of multiple if-else statements, the switch case makes such operations much easier
     </pre>
 
-
-   <script>
-
-
-
-
-
-      document.write(`Example 1:-`)
-      let a = (prompt(`Enter a Number`))
+    <script>
+      document.write(`Example 1:-`);
+      let a = prompt(`Enter a value, Eg: sun, mon, etc`);
       switch (a) {
-         case 'sun':
-            document.write(`Today is Sunday`)
-            break
+        case "sun":
+          document.write(`Today is Sunday`);
+          break;
 
+        //If break is not used, the statements after this are also executed
+        //that is even if the desired output is displayed, the cases after that are also displayed
 
-         //If break is not used, the statements after this are also executed
-         //that is even if the desired output is displayed, the cases after that are also displayed
+        case "mon":
+          document.write(`Today is Monday`);
+          break;
 
+        case "tue":
+          document.write(`Today is Tuesday`);
+          break;
 
-         case 'mon':
-            document.write(`Today is Monday`)
-            break
+        case "wed":
+          document.write(`Today is Wednesday`);
+          break;
 
+        case "thu":
+          document.write(`Today is Thursday`);
+          break;
 
-         case 'tue':
-            document.write(`Today is Tuesday`)
-            break
+        case "fri":
+          document.write(`Today is Friday`);
+          break;
 
+        case "sat":
+          document.write(`Today is Saturday`);
+          break;
 
-         case 'wed':
-            document.write(`Today is Wednesday`)
-            break
-
-
-         case 'thu':
-            document.write(`Today is Thursday`)
-            break
-
-
-         case 'fri':
-            document.write(`Today is Friday`)
-            break
-
-
-         case 'sat':
-            document.write(`Today is Saturday`)
-            break
-
-
-         default:
-            document.write(`Error in Input`)
-
+        default:
+          document.write(`Error in Input`);
       }
-      document.write(`<br>`)
-
-
-
-
-
-   </script>
-
-</body>
-
+      document.write(`<br>`);
+    </script>
+  </body>
 </html>
